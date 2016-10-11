@@ -28,7 +28,7 @@ class WPSEO_Sitemaps_Renderer {
 	 */
 	public function __construct() {
 
-		$stylesheet_url       = preg_replace( '/(^http[s]?:)/', '', esc_url( home_url( 'main-sitemap.xsl' ) ) );
+		$stylesheet_url       = preg_replace( '/(^http[s]?:)/', '', esc_url( site_url( 'main-sitemap.xsl' ) ) );
 		$this->stylesheet     = '<?xml-stylesheet type="text/xsl" href="' . $stylesheet_url . '"?>';
 		$this->charset        = get_bloginfo( 'charset' );
 		$this->output_charset = $this->charset;
